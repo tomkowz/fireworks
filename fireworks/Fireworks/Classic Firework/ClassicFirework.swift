@@ -87,21 +87,12 @@ public class ClassicFirework: Firework {
     }
 
     private func shuffledQuarters() -> [Quarter] {
-        var quarters: [Quarter] = [
+        return [
             .topRight, .topRight,
             .bottomRight, .bottomRight,
             .bottomLeft, .bottomLeft,
             .topLeft, .topLeft
-        ]
-
-        var shuffled = [Quarter]()
-        for _ in 0..<quarters.count {
-            let idx = Int(arc4random_uniform(UInt32(quarters.count)))
-            shuffled.append(quarters[idx])
-            quarters.remove(at: idx)
-        }
-
-        return shuffled
+        ].shuffled()
     }
 
     private func randomTrajectory(flipOptions: FlipOptions) -> SparkTrajectory {
