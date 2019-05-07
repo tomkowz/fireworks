@@ -2,13 +2,13 @@ import UIKit
 
 public class FountainFireworkController {
 
-    var scheduler = FireworkSparkScheduler()
+    public var scheduler = FireworkSparkScheduler()
 
-    func createFirework(at origin: CGPoint, sparkSize: CGSize, scale: CGFloat) -> Firework {
+    public func createFirework(at origin: CGPoint, sparkSize: CGSize, scale: CGFloat) -> Firework {
         return FountainFirework(origin: origin, sparkSize: sparkSize, scale: scale)
     }
 
-    func addFirework(sparks sparksCount: Int,
+    public func addFirework(sparks sparksCount: Int,
                      above sourceView: UIView,
                      sparkSize: CGSize = CGSize(width: 9, height: 9),
                      scale: CGFloat = 45.0,

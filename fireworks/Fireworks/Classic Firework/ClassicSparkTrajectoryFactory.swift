@@ -1,6 +1,6 @@
 import UIKit
 
-final class ClassicSparkTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol {
+public final class ClassicSparkTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol {
 
     private lazy var topRight: [SparkTrajectory] = {
         return [
@@ -20,11 +20,11 @@ final class ClassicSparkTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol
         ]
     }()
 
-    func randomTopRight() -> SparkTrajectory {
+    public func randomTopRight() -> SparkTrajectory {
         return self.topRight[Int(arc4random_uniform(UInt32(self.topRight.count)))]
     }
 
-    func randomBottomRight() -> SparkTrajectory {
+    public func randomBottomRight() -> SparkTrajectory {
         return self.bottomRight[Int(arc4random_uniform(UInt32(self.bottomRight.count)))]
     }
 }

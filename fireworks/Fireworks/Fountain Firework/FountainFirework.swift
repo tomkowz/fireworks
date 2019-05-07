@@ -18,7 +18,7 @@ public class FountainFirework: Firework {
     public var scale: CGFloat
     public var sparkSize: CGSize
 
-    var maxChangeValue: Int {
+    public var maxChangeValue: Int {
         return 10
     }
 
@@ -34,7 +34,7 @@ public class FountainFirework: Firework {
         return CircleColorSparkViewFactory()
     }
 
-    init(origin: CGPoint, sparkSize: CGSize, scale: CGFloat) {
+    public init(origin: CGPoint, sparkSize: CGSize, scale: CGFloat) {
         self.origin = origin
         self.sparkSize = sparkSize
         self.scale = scale

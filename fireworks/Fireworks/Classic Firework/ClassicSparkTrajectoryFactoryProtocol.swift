@@ -1,6 +1,6 @@
 import UIKit
 
-protocol ClassicSparkTrajectoryFactoryProtocol: SparkTrajectoryFactory {
+public protocol ClassicSparkTrajectoryFactoryProtocol: SparkTrajectoryFactory {
 
     func randomTopRight() -> SparkTrajectory
     func randomBottomRight() -> SparkTrajectory

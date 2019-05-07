@@ -32,7 +32,7 @@ public class ClassicFirework: Firework {
     public var scale: CGFloat
     public var sparkSize: CGSize
 
-    var maxChangeValue: Int {
+    public var maxChangeValue: Int {
         return 10
     }
 
@@ -40,7 +40,7 @@ public class ClassicFirework: Firework {
         return ClassicSparkTrajectoryFactory()
     }
 
-    var classicTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol {
+    public var classicTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol {
         return self.trajectoryFactory as! ClassicSparkTrajectoryFactoryProtocol
     }
 
@@ -50,7 +50,7 @@ public class ClassicFirework: Firework {
 
     private var quarters = [Quarter]()
 
-    init(origin: CGPoint, sparkSize: CGSize, scale: CGFloat) {
+    public init(origin: CGPoint, sparkSize: CGSize, scale: CGFloat) {
         self.origin = origin
         self.scale = scale
         self.sparkSize = sparkSize

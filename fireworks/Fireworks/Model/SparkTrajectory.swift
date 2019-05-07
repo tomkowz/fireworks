@@ -13,14 +13,14 @@ public extension SparkTrajectory {
 
     /// Scales a trajectory so it fits to a UI requirements in terms of size of a trajectory.
     /// Use it after all other transforms have been applied and before `shift`.
-    func scale(by value: CGFloat) -> SparkTrajectory {
+    public func scale(by value: CGFloat) -> SparkTrajectory {
         var copy = self
         (0..<self.points.count).forEach { copy.points[$0].multiply(by: value) }
         return copy
     }
 
     /// Flips trajectory horizontally
-    func flip() -> SparkTrajectory {
+    public func flip() -> SparkTrajectory {
         var copy = self
         (0..<self.points.count).forEach { copy.points[$0].x *= -1 }
         return copy
@@ -28,7 +28,7 @@ public extension SparkTrajectory {
 
     /// Shifts a trajectory by (x, y). Applies to each point.
     /// Use it after all other transformations have been applied and after `scale`.
-    func shift(to point: CGPoint) -> SparkTrajectory {
+    public func shift(to point: CGPoint) -> SparkTrajectory {
         var copy = self
         let vector = CGVector(dx: point.x, dy: point.y)
         (0..<self.points.count).forEach { copy.points[$0].add(vector: vector) }
@@ -41,7 +41,7 @@ public struct QuadraticBezierTrajectory: SparkTrajectory {
 
     public var points = [CGPoint]()
 
-    init(_ x0: CGFloat, _ y0: CGFloat,
+    public init(_ x0: CGFloat, _ y0: CGFloat,
          _ x1: CGFloat, _ y1: CGFloat,
          _ x2: CGFloat, _ y2: CGFloat) {
         self.points.append(CGPoint(x: x0, y: y0))
@@ -64,7 +64,7 @@ public struct CubicBezierTrajectory: SparkTrajectory {
 
     public var points = [CGPoint]()
 
-    init(_ x0: CGFloat, _ y0: CGFloat,
+    public init(_ x0: CGFloat, _ y0: CGFloat,
          _ x1: CGFloat, _ y1: CGFloat,
          _ x2: CGFloat, _ y2: CGFloat,
          _ x3: CGFloat, _ y3: CGFloat) {

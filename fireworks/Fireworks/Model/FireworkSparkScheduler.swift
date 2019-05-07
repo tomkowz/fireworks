@@ -2,7 +2,7 @@ import UIKit
 
 public class FireworkSparkScheduler {
 
-    var delay: TimeInterval = 0.05
+    public var delay: TimeInterval = 0.05
     private var timer: Timer?
     private var queue = [Data]()
     
@@ -14,7 +14,7 @@ public class FireworkSparkScheduler {
         let animationDuration: TimeInterval
     }
 
-    func schedule(sparks: [FireworkSpark],
+    public func schedule(sparks: [FireworkSpark],
                   in presenterView: UIView,
                   with animator: SparkViewAnimator,
                   animationDuration: TimeInterval) {
@@ -30,7 +30,7 @@ public class FireworkSparkScheduler {
         }
     }
 
-    func cancel() {
+    public func cancel() {
         self.timer?.invalidate()
         self.timer = nil
     }

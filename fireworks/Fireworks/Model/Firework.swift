@@ -26,7 +26,7 @@ public protocol Firework {
 extension Firework {
 
     /// Helper method that return spark view and corresponding trajectory.
-    func spark(at index: Int) -> FireworkSpark {
+    public func spark(at index: Int) -> FireworkSpark {
         return FireworkSpark(self.sparkView(at: index), self.trajectory(at: index))
     }
 }

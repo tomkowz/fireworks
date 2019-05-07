@@ -1,15 +1,15 @@
 import UIKit
 
-struct ImageSparkViewFactoryData: SparkViewFactoryData {
+public struct ImageSparkViewFactoryData: SparkViewFactoryData {
 
-    let image: UIImage
-    let size: CGSize
-    let index: Int
+    public let image: UIImage
+    public let size: CGSize
+    public let index: Int
 }
 
-struct ImageSparkViewFactory: SparkViewFactory {
+public struct ImageSparkViewFactory: SparkViewFactory {
 
-    func create(with data: SparkViewFactoryData) -> SparkView {
+    public func create(with data: SparkViewFactoryData) -> SparkView {
         guard let data = data as? ImageSparkViewFactoryData else {
             fatalError("Wrong data.")
         }
