@@ -1,6 +1,6 @@
 import UIKit
 
-class FountainFireworkController {
+public class FountainFireworkController {
 
     var scheduler = FireworkSparkScheduler()
 

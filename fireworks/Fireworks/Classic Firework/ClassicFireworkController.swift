@@ -1,6 +1,6 @@
 import UIKit
 
-class ClassicFireworkController {
+public class ClassicFireworkController {
 
     var sparkAnimator: SparkViewAnimator {
         return ClassicFireworkAnimator()
@@ -26,7 +26,7 @@ class ClassicFireworkController {
             CGPoint(x: sourceView.frame.maxX, y: sourceView.frame.minY),
             CGPoint(x: sourceView.frame.minX, y: sourceView.frame.maxY),
             CGPoint(x: sourceView.frame.maxX, y: sourceView.frame.maxY),
-            ]
+        ]
 
         for _ in 0..<fireworksCount {
             let idx = Int(arc4random_uniform(UInt32(origins.count)))

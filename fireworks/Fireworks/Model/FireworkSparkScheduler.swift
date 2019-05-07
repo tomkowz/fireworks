@@ -1,6 +1,6 @@
 import UIKit
 
-class FireworkSparkScheduler {
+public class FireworkSparkScheduler {
 
     var delay: TimeInterval = 0.05
     private var timer: Timer?

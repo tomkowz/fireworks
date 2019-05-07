@@ -1,6 +1,6 @@
 import UIKit
 
-protocol Firework {
+public protocol Firework {
 
     /// Defines origin of firework.
     var origin: CGPoint { get set }

@@ -1,6 +1,6 @@
 import UIKit
 
-class ClassicFirework: Firework {
+public class ClassicFirework: Firework {
 
     /**
      x     |     x

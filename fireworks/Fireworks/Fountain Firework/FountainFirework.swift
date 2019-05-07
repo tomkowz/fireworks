@@ -1,6 +1,6 @@
 import UIKit
 
-class FountainFirework: Firework {
+public class FountainFirework: Firework {
 
     /**
       x   x x  x x
