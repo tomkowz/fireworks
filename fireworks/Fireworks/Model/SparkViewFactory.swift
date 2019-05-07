@@ -1,18 +1,18 @@
 import UIKit
 
-protocol SparkViewFactoryData {
+public protocol SparkViewFactoryData {
 
     var size: CGSize { get }
     var index: Int { get }
 }
 
-protocol SparkViewFactory {
+public protocol SparkViewFactory {
 
     func create(with data: SparkViewFactoryData) -> SparkView
 }
 
-struct DefaultSparkViewFactoryData: SparkViewFactoryData {
+public struct DefaultSparkViewFactoryData: SparkViewFactoryData {
 
-    let size: CGSize
-    let index: Int
+    public let size: CGSize
+    public let index: Int
 }

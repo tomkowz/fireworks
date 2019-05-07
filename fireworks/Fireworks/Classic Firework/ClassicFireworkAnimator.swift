@@ -2,7 +2,7 @@ import UIKit
 
 public struct ClassicFireworkAnimator: SparkViewAnimator {
 
-    func animate(spark: FireworkSpark, duration: TimeInterval) {
+    public func animate(spark: FireworkSpark, duration: TimeInterval) {
         spark.sparkView.isHidden = false // show previously hidden spark view
 
         CATransaction.begin()

@@ -41,7 +41,6 @@
 		6DF25D6C21529C5E00AD30F7 /* PusheenFountainFirework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF25D6B21529C5E00AD30F7 /* PusheenFountainFirework.swift */; };
 		6DF25D6E21529C8400AD30F7 /* PusheenFountainFireworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF25D6D21529C8400AD30F7 /* PusheenFountainFireworkController.swift */; };
 		6DF25D732152A99500AD30F7 /* ClassicFireworkDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF25D722152A99500AD30F7 /* ClassicFireworkDemoViewController.swift */; };
-		8CC4C853228116F600400996 /* UIView+Fireworks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC4C852228116F600400996 /* UIView+Fireworks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +80,6 @@
 		6DF25D6B21529C5E00AD30F7 /* PusheenFountainFirework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusheenFountainFirework.swift; sourceTree = "<group>"; };
 		6DF25D6D21529C8400AD30F7 /* PusheenFountainFireworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PusheenFountainFireworkController.swift; sourceTree = "<group>"; };
 		6DF25D722152A99500AD30F7 /* ClassicFireworkDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicFireworkDemoViewController.swift; sourceTree = "<group>"; };
-		8CC4C852228116F600400996 /* UIView+Fireworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Fireworks.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +169,6 @@
 		6DA9634D214FF9B4000F51AE /* Fireworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CC4C851228116CF00400996 /* Extensions */,
 				6D47CE5621526B3D000B3639 /* Spark Views */,
 				6D47CE5021525F1A000B3639 /* System Extensions */,
 				6D47CE4D21525EDA000B3639 /* Model */,
@@ -232,14 +229,6 @@
 				6DA96342214FF79F000F51AE /* Assets.xcassets */,
 			);
 			path = "Demo App";
-			sourceTree = "<group>";
-		};
-		8CC4C851228116CF00400996 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				8CC4C852228116F600400996 /* UIView+Fireworks.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,7 +319,6 @@
 				6D47CE5A2152751A000B3639 /* SparkTrajectoryFactory.swift in Sources */,
 				6DF25D5421527DA800AD30F7 /* SparkViewFactory.swift in Sources */,
 				6D47CE2E2152331E000B3639 /* Firework.swift in Sources */,
-				8CC4C853228116F600400996 /* UIView+Fireworks.swift in Sources */,
 				6DF25D6A21529B3100AD30F7 /* PusheenSparkViewFactory.swift in Sources */,
 				6DF25D5921528CEE00AD30F7 /* FountainSparkTrajectoryFactory.swift in Sources */,
 				6D47CE3B215242A6000B3639 /* FountainFireworkAnimator.swift in Sources */,

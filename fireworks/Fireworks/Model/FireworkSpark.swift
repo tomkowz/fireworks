@@ -1,3 +1,3 @@
 import UIKit
 
-typealias FireworkSpark = (sparkView: SparkView, trajectory: SparkTrajectory)
+public typealias FireworkSpark = (sparkView: SparkView, trajectory: SparkTrajectory)

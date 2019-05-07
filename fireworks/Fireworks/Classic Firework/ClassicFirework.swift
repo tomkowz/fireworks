@@ -28,15 +28,15 @@ public class ClassicFirework: Firework {
         case topLeft
     }
 
-    var origin: CGPoint
-    var scale: CGFloat
-    var sparkSize: CGSize
+    public var origin: CGPoint
+    public var scale: CGFloat
+    public var sparkSize: CGSize
 
     var maxChangeValue: Int {
         return 10
     }
 
-    var trajectoryFactory: SparkTrajectoryFactory {
+    public var trajectoryFactory: SparkTrajectoryFactory {
         return ClassicSparkTrajectoryFactory()
     }
 
@@ -44,7 +44,7 @@ public class ClassicFirework: Firework {
         return self.trajectoryFactory as! ClassicSparkTrajectoryFactoryProtocol
     }
 
-    var sparkViewFactory: SparkViewFactory {
+    public var sparkViewFactory: SparkViewFactory {
         return CircleColorSparkViewFactory()
     }
 
@@ -57,15 +57,15 @@ public class ClassicFirework: Firework {
         self.quarters = self.shuffledQuarters()
     }
 
-    func sparkViewFactoryData(at index: Int) -> SparkViewFactoryData {
+    public func sparkViewFactoryData(at index: Int) -> SparkViewFactoryData {
         return DefaultSparkViewFactoryData(size: self.sparkSize, index: index)
     }
 
-    func sparkView(at index: Int) -> SparkView {
+    public func sparkView(at index: Int) -> SparkView {
         return self.sparkViewFactory.create(with: self.sparkViewFactoryData(at: index))
     }
 
-    func trajectory(at index: Int) -> SparkTrajectory {
+    public func trajectory(at index: Int) -> SparkTrajectory {
         let quarter = self.quarters[index]
         let flipOptions = self.flipOptions(for: quarter)
         let changeVector = self.randomChangeVector(flipOptions: flipOptions, maxValue: self.maxChangeValue)

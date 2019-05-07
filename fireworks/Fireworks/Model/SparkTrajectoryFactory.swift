@@ -1,8 +1,8 @@
 import UIKit
 
-protocol SparkTrajectoryFactory {}
+public protocol SparkTrajectoryFactory {}
 
-protocol DefaultSparkTrajectoryFactory: SparkTrajectoryFactory {
+public protocol DefaultSparkTrajectoryFactory: SparkTrajectoryFactory {
 
     func random() -> SparkTrajectory
 }
