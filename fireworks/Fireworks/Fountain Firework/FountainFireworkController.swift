@@ -2,6 +2,8 @@ import UIKit
 
 public class FountainFireworkController {
 
+    public init() {}
+    
     public var scheduler = FireworkSparkScheduler()
 
     public func createFirework(at origin: CGPoint, sparkSize: CGSize, scale: CGFloat) -> Firework {

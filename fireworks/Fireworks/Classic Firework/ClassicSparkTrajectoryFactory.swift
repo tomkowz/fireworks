@@ -2,6 +2,8 @@ import UIKit
 
 public final class ClassicSparkTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol {
 
+    public init() {}
+
     private lazy var topRight: [SparkTrajectory] = {
         return [
             CubicBezierTrajectory(0.00, 0.00, 0.31, -0.46, 0.74, -0.29, 0.99, 0.12),

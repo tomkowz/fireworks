@@ -2,6 +2,8 @@ import UIKit
 
 public class ClassicFireworkController {
 
+    public init() {}
+
     public var sparkAnimator: SparkViewAnimator {
         return ClassicFireworkAnimator()
     }

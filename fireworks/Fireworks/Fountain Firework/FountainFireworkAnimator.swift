@@ -2,6 +2,8 @@ import UIKit
 
 public struct FountainFireworkAnimator: SparkViewAnimator {
 
+    public init() {}
+
     public func animate(spark: FireworkSpark, duration: TimeInterval) {
         spark.sparkView.isHidden = false
         
