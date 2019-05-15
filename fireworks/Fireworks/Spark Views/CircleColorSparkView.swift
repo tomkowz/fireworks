@@ -1,8 +1,8 @@
 import UIKit
 
-final class CircleColorSparkView: SparkView {
+public final class CircleColorSparkView: SparkView {
 
-    init(color: UIColor, size: CGSize) {
+    public init(color: UIColor, size: CGSize) {
         super.init(frame: CGRect(origin: .zero, size: size))
         self.backgroundColor = color
         self.layer.cornerRadius = self.frame.width / 2.0
@@ -15,7 +15,7 @@ final class CircleColorSparkView: SparkView {
 
 extension UIColor {
 
-    static var sparkColorSet1: [UIColor] = {
+    public static var sparkColorSet1: [UIColor] = {
         return [
             UIColor(red:0.89, green:0.58, blue:0.70, alpha:1.00),
             UIColor(red:0.96, green:0.87, blue:0.62, alpha:1.00),

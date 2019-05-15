@@ -1,3 +1,3 @@
 import UIKit
 
-class SparkView: UIView {}
+public class SparkView: UIView {}

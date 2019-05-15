@@ -1,17 +1,19 @@
 import UIKit
 
-class ClassicFireworkController {
+public class ClassicFireworkController {
 
-    var sparkAnimator: SparkViewAnimator {
+    public init() {}
+
+    public var sparkAnimator: SparkViewAnimator {
         return ClassicFireworkAnimator()
     }
 
-    func createFirework(at origin: CGPoint, sparkSize: CGSize, scale: CGFloat) -> Firework {
+    public func createFirework(at origin: CGPoint, sparkSize: CGSize, scale: CGFloat) -> Firework {
         return ClassicFirework(origin: origin, sparkSize: sparkSize, scale: scale)
     }
 
     /// It allows fireworks to explodes in close range of corners of a source view
-    func addFireworks(count fireworksCount: Int = 1,
+    public func addFireworks(count fireworksCount: Int = 1,
                       sparks sparksCount: Int = 8,
                       around sourceView: UIView,
                       sparkSize: CGSize = CGSize(width: 7, height: 7),
@@ -26,7 +28,7 @@ class ClassicFireworkController {
             CGPoint(x: sourceView.frame.maxX, y: sourceView.frame.minY),
             CGPoint(x: sourceView.frame.minX, y: sourceView.frame.maxY),
             CGPoint(x: sourceView.frame.maxX, y: sourceView.frame.maxY),
-            ]
+        ]
 
         for _ in 0..<fireworksCount {
             let idx = Int(arc4random_uniform(UInt32(origins.count)))

@@ -1,8 +1,10 @@
 import UIKit
 
-struct FountainFireworkAnimator: SparkViewAnimator {
+public struct FountainFireworkAnimator: SparkViewAnimator {
 
-    func animate(spark: FireworkSpark, duration: TimeInterval) {
+    public init() {}
+
+    public func animate(spark: FireworkSpark, duration: TimeInterval) {
         spark.sparkView.isHidden = false
         
         CATransaction.begin()

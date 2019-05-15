@@ -1,6 +1,6 @@
 import UIKit
 
-protocol SparkTrajectory {
+public protocol SparkTrajectory {
 
     /// Stores all points that defines a trajectory.
     var points: [CGPoint] { get set }
@@ -9,18 +9,18 @@ protocol SparkTrajectory {
     var path: UIBezierPath { get }
 }
 
-extension SparkTrajectory {
+public extension SparkTrajectory {
 
     /// Scales a trajectory so it fits to a UI requirements in terms of size of a trajectory.
     /// Use it after all other transforms have been applied and before `shift`.
-    func scale(by value: CGFloat) -> SparkTrajectory {
+    public func scale(by value: CGFloat) -> SparkTrajectory {
         var copy = self
         (0..<self.points.count).forEach { copy.points[$0].multiply(by: value) }
         return copy
     }
 
     /// Flips trajectory horizontally
-    func flip() -> SparkTrajectory {
+    public func flip() -> SparkTrajectory {
         var copy = self
         (0..<self.points.count).forEach { copy.points[$0].x *= -1 }
         return copy
@@ -28,7 +28,7 @@ extension SparkTrajectory {
 
     /// Shifts a trajectory by (x, y). Applies to each point.
     /// Use it after all other transformations have been applied and after `scale`.
-    func shift(to point: CGPoint) -> SparkTrajectory {
+    public func shift(to point: CGPoint) -> SparkTrajectory {
         var copy = self
         let vector = CGVector(dx: point.x, dy: point.y)
         (0..<self.points.count).forEach { copy.points[$0].add(vector: vector) }
@@ -37,11 +37,11 @@ extension SparkTrajectory {
 }
 
 /// Bezier path with one control point.
-struct QuadraticBezierTrajectory: SparkTrajectory {
+public struct QuadraticBezierTrajectory: SparkTrajectory {
 
-    var points = [CGPoint]()
+    public var points = [CGPoint]()
 
-    init(_ x0: CGFloat, _ y0: CGFloat,
+    public init(_ x0: CGFloat, _ y0: CGFloat,
          _ x1: CGFloat, _ y1: CGFloat,
          _ x2: CGFloat, _ y2: CGFloat) {
         self.points.append(CGPoint(x: x0, y: y0))
@@ -49,7 +49,7 @@ struct QuadraticBezierTrajectory: SparkTrajectory {
         self.points.append(CGPoint(x: x2, y: y2))
     }
 
-    var path: UIBezierPath {
+    public var path: UIBezierPath {
         guard self.points.count == 3 else { fatalError("3 points required.") }
 
         let path = UIBezierPath()
@@ -60,11 +60,11 @@ struct QuadraticBezierTrajectory: SparkTrajectory {
 }
 
 /// Bezier path with two control points.
-struct CubicBezierTrajectory: SparkTrajectory {
+public struct CubicBezierTrajectory: SparkTrajectory {
 
-    var points = [CGPoint]()
+    public var points = [CGPoint]()
 
-    init(_ x0: CGFloat, _ y0: CGFloat,
+    public init(_ x0: CGFloat, _ y0: CGFloat,
          _ x1: CGFloat, _ y1: CGFloat,
          _ x2: CGFloat, _ y2: CGFloat,
          _ x3: CGFloat, _ y3: CGFloat) {
@@ -74,7 +74,7 @@ struct CubicBezierTrajectory: SparkTrajectory {
         self.points.append(CGPoint(x: x3, y: y3))
     }
 
-    var path: UIBezierPath {
+    public var path: UIBezierPath {
         guard self.points.count == 4 else { fatalError("4 points required") }
 
         let path = UIBezierPath()

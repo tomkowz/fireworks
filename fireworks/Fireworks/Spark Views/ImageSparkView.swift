@@ -1,8 +1,8 @@
 import UIKit
 
-final class ImageSparkView: SparkView {
+public final class ImageSparkView: SparkView {
 
-    init(image: UIImage, size: CGSize) {
+    public init(image: UIImage, size: CGSize) {
         super.init(frame: CGRect(origin: .zero, size: size))
 
         let imageView = UIImageView(frame: self.bounds)

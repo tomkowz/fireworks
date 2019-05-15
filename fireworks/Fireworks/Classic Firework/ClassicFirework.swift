@@ -1,6 +1,6 @@
 import UIKit
 
-class ClassicFirework: Firework {
+public class ClassicFirework: Firework {
 
     /**
      x     |     x
@@ -28,44 +28,44 @@ class ClassicFirework: Firework {
         case topLeft
     }
 
-    var origin: CGPoint
-    var scale: CGFloat
-    var sparkSize: CGSize
+    public var origin: CGPoint
+    public var scale: CGFloat
+    public var sparkSize: CGSize
 
-    var maxChangeValue: Int {
+    public var maxChangeValue: Int {
         return 10
     }
 
-    var trajectoryFactory: SparkTrajectoryFactory {
+    public var trajectoryFactory: SparkTrajectoryFactory {
         return ClassicSparkTrajectoryFactory()
     }
 
-    var classicTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol {
+    public var classicTrajectoryFactory: ClassicSparkTrajectoryFactoryProtocol {
         return self.trajectoryFactory as! ClassicSparkTrajectoryFactoryProtocol
     }
 
-    var sparkViewFactory: SparkViewFactory {
+    public var sparkViewFactory: SparkViewFactory {
         return CircleColorSparkViewFactory()
     }
 
     private var quarters = [Quarter]()
 
-    init(origin: CGPoint, sparkSize: CGSize, scale: CGFloat) {
+    public init(origin: CGPoint, sparkSize: CGSize, scale: CGFloat) {
         self.origin = origin
         self.scale = scale
         self.sparkSize = sparkSize
         self.quarters = self.shuffledQuarters()
     }
 
-    func sparkViewFactoryData(at index: Int) -> SparkViewFactoryData {
+    public func sparkViewFactoryData(at index: Int) -> SparkViewFactoryData {
         return DefaultSparkViewFactoryData(size: self.sparkSize, index: index)
     }
 
-    func sparkView(at index: Int) -> SparkView {
+    public func sparkView(at index: Int) -> SparkView {
         return self.sparkViewFactory.create(with: self.sparkViewFactoryData(at: index))
     }
 
-    func trajectory(at index: Int) -> SparkTrajectory {
+    public func trajectory(at index: Int) -> SparkTrajectory {
         let quarter = self.quarters[index]
         let flipOptions = self.flipOptions(for: quarter)
         let changeVector = self.randomChangeVector(flipOptions: flipOptions, maxValue: self.maxChangeValue)
@@ -87,21 +87,12 @@ class ClassicFirework: Firework {
     }
 
     private func shuffledQuarters() -> [Quarter] {
-        var quarters: [Quarter] = [
+        return [
             .topRight, .topRight,
             .bottomRight, .bottomRight,
             .bottomLeft, .bottomLeft,
             .topLeft, .topLeft
-        ]
-
-        var shuffled = [Quarter]()
-        for _ in 0..<quarters.count {
-            let idx = Int(arc4random_uniform(UInt32(quarters.count)))
-            shuffled.append(quarters[idx])
-            quarters.remove(at: idx)
-        }
-
-        return shuffled
+        ].shuffled()
     }
 
     private func randomTrajectory(flipOptions: FlipOptions) -> SparkTrajectory {

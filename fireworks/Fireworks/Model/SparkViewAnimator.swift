@@ -1,6 +1,5 @@
 import UIKit
 
-protocol SparkViewAnimator {
-
+public protocol SparkViewAnimator {
     func animate(spark: FireworkSpark, duration: TimeInterval)
 }
