@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary                 = 'A framework for generating firework-like particle effects.'
   s.author                  = { 'Tomasz Szulc' => 'mail@szulctomasz.com' }
   s.homepage                = 'http://szulctomasz.com'
-  s.license                 = { :type => 'MIT', :file => 'LICENSE' }
+  s.license                 = { :type => 'MIT' }
   s.swift_version           = '4.0'
   s.source                  = { :git => 'https://github.com/tomkowz/fireworks.git', :tag => '1.0.0' }
   s.source_files            = 'fireworks/Fireworks/**/*.swift'
