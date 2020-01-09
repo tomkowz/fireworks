@@ -12,4 +12,4 @@ More in [article on szulctomasz.com](http://szulctomasz.com/programming-blog/201
 
 # others
 
-a Object-C version : [SparkDemo](https://github.com/wangyingbo/SparkDemo)
+Object-C version : [SparkDemo](https://github.com/wangyingbo/SparkDemo)
